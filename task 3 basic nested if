@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+
+    if (num >= 1) {
+        if (num <= 100) {
+            cout << "The number is between 1 and 100" << endl;
+        } else {
+            cout << "The number is greater than 100" << endl;
+        }
+    } else {
+        cout << "The number is less than 1" << endl;
+    }
+    return 0;
+}
