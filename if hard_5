@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int marks;
+    cout<<"enter student marks: ";
+    cin>>marks;
+    if(marks>=0&&marks<=100)
+        cout<<"valid marks"<<endl;
+    if(marks<0||marks>100)
+        cout<<"They're invalid marks."<<endl;
+    if(marks>=50&&marks<=100)
+        cout<<"student is passed"<<endl;
+    if(marks<50&&marks>=0)
+        cout<<"student has failed"<<endl;
+    if(marks>=80&&marks<=100)
+        cout<<"A+ GPA achieved"<<endl;
+    if(marks>=90&&marks<=100)
+        cout<<"scholarshipmet"<<endl;
+    if(marks==100)
+        cout<<"Perfect score!"<<endl;
+    return 0;
+}
