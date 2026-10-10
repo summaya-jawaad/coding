@@ -1,0 +1,45 @@
+// balance recharge 
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int choice,balance,price;
+    cout<<"select your recharge package:"<<endl;
+    cout<<"1. rs.200"<<endl;
+    cout<<"2. rs.500"<<endl;
+    cout<<"3. rs.1000"<<endl;
+    cout<<"enter your choice: ";
+    cin>>choice;
+    switch(choice)
+    {
+        case 1:
+            price=200;
+            break;
+        case 2:
+            price=500;
+            break;
+        case 3:
+            price=1000;
+            break;
+        default:
+            price=0;
+    }
+
+    if(price==0)
+        cout<<"invalid package selection"<<endl;
+    else
+    {
+        cout<<"enter your current balance: ";
+        cin>>balance;
+        if(balance>=price)// condition!! 
+        {
+            balance=balance-price;
+            cout<<"recharge successful"<<endl;
+            cout<<"remaining balance: rs."<<balance<<endl;
+        }
+        else
+            cout<<"insufficient balance"<<endl;
+    }
+    return 0;
+}
