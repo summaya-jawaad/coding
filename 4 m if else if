@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int total, attended;
+    float percent;
+    cout << "Enter total lectures: ";
+    cin >> total;
+    cout << "Enter lectures attended: ";
+    cin >> attended;
+
+    if (total <= 0 || attended < 0 || attended > total) {
+        cout << "Invalid input" << endl;
+    } else {
+        percent = attended * 100.0 / total;
+        cout << "Attendance: " << percent << "%" << endl;
+
+        if (percent >= 90) {
+            cout << "Excellent attendance" << endl;
+        } else if (percent >= 75) {
+            cout << "Allowed to sit in the exam" << endl;
+        } else if (percent >= 60) {
+            cout << "Short attendance, warning issued" << endl;
+        } else {
+            cout << "Not allowed to sit in the exam" << endl;
+        }
+    }
+    return 0;
+}
