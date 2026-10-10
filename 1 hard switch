@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int network, package;
+
+    cout << "Choose network (1 = Jazz, 2 = Zong, 3 = Telenor): ";
+    cin >> network;
+
+    switch (network) {
+        case 1:
+            cout << "Choose package (1 = Daily, 2 = Weekly, 3 = Monthly): ";
+            cin >> package;
+            switch (package) {
+                case 1: cout << "Jazz Daily: 1 GB for 50 rupees" << endl; break;
+                case 2: cout << "Jazz Weekly: 5 GB for 250 rupees" << endl; break;
+                case 3: cout << "Jazz Monthly: 30 GB for 1000 rupees" << endl; break;
+                default: cout << "Invalid package" << endl;
+            }
+            break;
+        case 2:
+            cout << "Choose package (1 = Daily, 2 = Weekly, 3 = Monthly): ";
+            cin >> package;
+            switch (package) {
+                case 1: cout << "Zong Daily: 1.5 GB for 60 rupees" << endl; break;
+                case 2: cout << "Zong Weekly: 6 GB for 280 rupees" << endl; break;
+                case 3: cout << "Zong Monthly: 35 GB for 1100 rupees" << endl; break;
+                default: cout << "Invalid package" << endl;
+            }
+            break;
+        case 3:
+            cout << "Choose package (1 = Daily, 2 = Weekly, 3 = Monthly): ";
+            cin >> package;
+            switch (package) {
+                case 1: cout << "Telenor Daily: 1 GB for 45 rupees" << endl; break;
+                case 2: cout << "Telenor Weekly: 4 GB for 220 rupees" << endl; break;
+                case 3: cout << "Telenor Monthly: 25 GB for 900 rupees" << endl; break;
+                default: cout << "Invalid package" << endl;
+            }
+            break;
+        default:
+            cout << "Invalid network" << endl;
+    }
+    return 0;
+}
