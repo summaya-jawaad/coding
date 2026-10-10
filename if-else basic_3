@@ -1,0 +1,25 @@
+// greater of two numbers
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b;
+    cout<<"first number=  ";
+    cin>>a;
+    cout<<"second number= ";
+    cin>>b;
+
+    if(a>b)
+    {
+        cout<<"first number is greater."<<endl;
+    }
+    else if(b>a)
+    {
+        cout<<"second number is greater."<<endl;
+    }
+    else
+    {
+        bcout<<"hoth numbers are equal."<<endl;
+    }
+    return 0;
+}
