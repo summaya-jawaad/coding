@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float weight;
+    int city, charges;
+    cout << "Enter parcel weight in kg: ";
+    cin >> weight;
+    cout << "Enter 1 for same city, 2 for other city: ";
+    cin >> city;
+
+    if (weight > 0) {
+        if (weight <= 20) {
+            if (city == 1) {
+                if (weight <= 5) {
+                    charges = 150;
+                } else {
+                    charges = 250;
+                }
+            } else {
+                if (city == 2) {
+                    if (weight <= 5) {
+                        charges = 300;
+                    } else {
+                        charges = 500;
+                    }
+                } else {
+                    cout << "Invalid city choice" << endl;
+                    return 0;
+                }
+            }
+            cout << "Delivery charges: " << charges << endl;
+        } else {
+            cout << "Parcel is too heavy (maximum 20 kg)" << endl;
+        }
+    } else {
+        cout << "Invalid weight" << endl;
+    }
+    return 0;
+}
