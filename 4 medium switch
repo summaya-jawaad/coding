@@ -1,0 +1,46 @@
+// hotel room booking system using switch statement + price and typpe of room
+#include<iostream>
+using namespace std;
+int main()
+{
+    int choice,nights,price;
+    float total;
+    cout<<"select your room:"<<endl;
+    cout<<"1. standard room - rs.3000"<<endl;
+    cout<<"2. deluxe room - rs.5000"<<endl;
+    cout<<"3. luxury room - rs.8000"<<endl;
+    cout<<"enter your choice: ";
+    cin>>choice;
+    switch(choice)
+    {
+        case 1:
+            price=3000;
+            break;
+        case 2:
+            price=5000;
+            break;
+        case 3:
+            price=8000;
+            break;
+        default:
+            price=0;
+    }
+
+    if(price==0)
+        cout<<"invalid room choice"<<endl;
+    else
+    {
+        cout<<"enter number of nights: ";
+        cin>>nights;
+        if(nights<=0)
+            cout<<"invalid number of nights"<<endl;
+        else
+        {
+            total=price*nights;
+            if(nights>5)
+                total=total-(total*0.10);
+            cout<<"your total bill is rs."<<total<<endl;
+        }
+    }
+    return 0;
+}
