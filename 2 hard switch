@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int shape, task;
+    double r, l, w, side;
+    const double PI = 3.14159;
+
+    cout << "Choose shape (1 = Circle, 2 = Rectangle, 3 = Square): ";
+    cin >> shape;
+    cout << "Choose task (1 = Area, 2 = Perimeter): ";
+    cin >> task;
+
+    switch (shape) {
+        case 1:
+            cout << "Enter radius: ";
+            cin >> r;
+            switch (task) {
+                case 1: cout << "Area = " << PI * r * r << endl; break;
+                case 2: cout << "Circumference = " << 2 * PI * r << endl; break;
+                default: cout << "Invalid task" << endl;
+            }
+            break;
+        case 2:
+            cout << "Enter length and width: ";
+            cin >> l >> w;
+            switch (task) {
+                case 1: cout << "Area = " << l * w << endl; break;
+                case 2: cout << "Perimeter = " << 2 * (l + w) << endl; break;
+                default: cout << "Invalid task" << endl;
+            }
+            break;
+        case 3:
+            cout << "Enter side: ";
+            cin >> side;
+            switch (task) {
+                case 1: cout << "Area = " << side * side << endl; break;
+                case 2: cout << "Perimeter = " << 4 * side << endl; break;
+                default: cout << "Invalid task" << endl;
+            }
+            break;
+        default:
+            cout << "Invalid shape" << endl;
+    }
+    return 0;
+}
