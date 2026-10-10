@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int marks;
+    char disabled,rural,lowincome;
+    cout<<"Enter admission marks: ";
+    cin>>marks;
+    cout<<"Are you disabled? (Y/N): ";
+    cin>>disabled;
+    cout<<"Are you from a rural area? (Y or N): ";
+    cin>>rural;
+    cout<<"Are you from a low-income family? (Y or N): ";
+    cin>> lowincome;
+    if(marks<50||marks>100)
+    {
+        cout<<"invalid marks or minimum not achieved!"<<endl;
+    }
+    else if((disabled=='Y'||disabled=='y')&&(rural=='Y'||rural=='y'))
+    {
+        cout<<"Category: disabled and rural quota"<<endl;
+        cout<<"Reserved seats in category: 5"<<endl;
+    }
+    else if(disabled=='Y'||disabled=='y')
+    {
+        cout<<"Category: disability quota"<<endl;
+        cout<<"Reserved seats in category are- 5"<<endl;
+    }
+    else if(rural=='Y'||rural=='y')
+    {
+        cout<<"Category: Rural area quota"<<endl;
+        cout<<"Reserved seats in category are- 10"<<endl;
+    }
+    else if(lowincome=='Y'||lowincome=='y')
+    {
+        cout<<"Category: Low-Income quota"<<endl;
+        cout<<"Reserved seats in category are- 10"<<endl;
+    }
+    else
+    {
+        cout<<"Category: general merit"<<endl;
+        cout<<"Seats in category: 70"<<endl;
+    }
+    return 0;
+}
