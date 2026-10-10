@@ -1,0 +1,14 @@
+// program to check whether a number is in the game range
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout<<"enter a number between 1 and 30: ";
+    cin>>num;
+    if(num>=1&&num<=30)
+    {
+        cout<<"your number is within the range!, you win!"<<endl;
+    }
+    return 0;
+}
