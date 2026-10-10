@@ -1,0 +1,18 @@
+//program to check scholarship eligibile
+#include<iostream>
+using namespace std;
+int main()
+{
+    int marks,attendance,absent;
+    cout<<"enter your marks: ";
+    cin>>marks;
+    cout<<"enter attendance percentage: ";
+    cin>>attendance;
+    cout<<"enter number of absents: ";
+    cin>>absent;
+    if(marks>=85&&attendance>=80&&absent<=2)
+    {
+        cout<<"congratulations! You qualify for the scholarship."<<endl;
+    }
+    return 0;
+}
