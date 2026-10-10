@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int battery;
+    cout << "Enter battery percentage: ";
+    cin >> battery;
+
+    if (battery < 0 || battery > 100) {
+        cout << "Invalid percentage" << endl;
+    } else if (battery <= 10) {
+        cout << "Critical, charge your phone now" << endl;
+    } else if (battery <= 30) {
+        cout << "Low battery" << endl;
+    } else if (battery <= 80) {
+        cout << "Battery is fine" << endl;
+    } else {
+        cout << "Battery is almost full" << endl;
+    }
+    return 0;
+}
