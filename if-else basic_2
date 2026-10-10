@@ -1,0 +1,18 @@
+// pass or fail program
+#include<iostream>
+using namespace std;
+int main()
+{
+    int marks;
+    cout<<"enter your marks= ";
+    cin>>marks;
+    if(marks>=50)
+    {
+        cout<<"congrats! you passed!"<<endl;
+    }
+    else
+    {
+        cout<<"you failed."<<endl;
+    }
+    return 0;
+}
