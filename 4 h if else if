@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    double pkr, rate, fee, converted;
+
+    cout << "Enter amount in PKR: ";
+    cin >> pkr;
+    cout << "Convert to (1 = USD, 2 = EUR, 3 = GBP, 4 = SAR, 5 = AED): ";
+    cin >> choice;
+
+    if (pkr <= 0) {
+        cout << "Invalid amount" << endl;
+    } else {
+        if (choice == 1) {
+            rate = 280;
+        } else if (choice == 2) {
+            rate = 305;
+        } else if (choice == 3) {
+            rate = 355;
+        } else if (choice == 4) {
+            rate = 75;
+        } else if (choice == 5) {
+            rate = 76;
+        } else {
+            cout << "Invalid currency choice" << endl;
+            return 0;
+        }
+
+        if (pkr >= 100000) {
+            fee = 0;
+        } else if (pkr >= 50000) {
+            fee = pkr * 0.01;
+        } else {
+            fee = pkr * 0.02;
+        }
+
+        converted = (pkr - fee) / rate;
+        cout << "Commission: " << fee << " PKR" << endl;
+        cout << "You will get: " << converted << endl;
+    }
+    return 0;
+}
