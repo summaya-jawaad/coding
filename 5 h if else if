@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int matches;
+    float average, strikeRate;
+
+    cout << "Enter matches played: ";
+    cin >> matches;
+    cout << "Enter batting average: ";
+    cin >> average;
+    cout << "Enter strike rate: ";
+    cin >> strikeRate;
+
+    if (matches < 0 || average < 0 || strikeRate < 0) {
+        cout << "Invalid input" << endl;
+    } else if (matches < 10) {
+        cout << "Not enough matches to judge" << endl;
+    } else if (average >= 50 && strikeRate >= 90) {
+        cout << "Elite batsman" << endl;
+    } else if (average >= 40 && strikeRate >= 80) {
+        cout << "Star batsman" << endl;
+    } else if (average >= 30 || strikeRate >= 100) {
+        cout << "Good batsman" << endl;
+    } else if (average >= 20) {
+        cout << "Average batsman" << endl;
+    } else {
+        cout << "Needs improvement" << endl;
+    }
+    return 0;
+}
