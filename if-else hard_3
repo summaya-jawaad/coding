@@ -1,0 +1,20 @@
+// fun lie detector
+#include<iostream>
+using namespace std;
+int main()
+{
+    char answer1,answer2;
+    cout<<"Did you complete your homework? (Yes or No): ";
+    cin>>answer1;
+    cout<<"Did you tell the truth? (Yes or No): ";
+    cin>>answer2;
+    if((answer1=='Yes'||answer1=='yes')&&(answer2=='Yes'||answer2=='yes'))
+    {
+        cout<<"You seem honest!"<<endl;
+    }
+    else
+    {
+        cout<<"Suspicious! You might be hiding something."<<endl;
+    }
+    return 0;
+}
