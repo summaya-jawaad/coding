@@ -1,0 +1,57 @@
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int choice,game,guess;
+    char again;
+    cout<<"welcome to mini game center"<<endl;
+    cout<<"1. rock,paper,scissors"<<endl;
+    cout<<"2. guess the number"<<endl;
+    cout<<"select a game: ";
+    cin>>choice;
+
+    switch(choice)
+    {
+        case 1:
+            cout<<"choose your move:"<<endl;
+            cout<<"1. rock"<<endl;
+            cout<<"2. paper"<<endl;
+            cout<<"3. scissors"<<endl;
+            cout<<"enter your choice: ";
+            cin>>game;
+            switch(game)
+            {
+                case 1:
+                    cout<<"I chose scissors, so.."<<endl;
+                    cout<<"you win!"<<endl;
+                    break;
+                case 2:
+                    cout<<"i chose scissors, so.."<<endl;
+                    cout<<"you lose!"<<endl;
+                    break;
+                case 3:
+                    cout<<"i chose scissors..so.."<<endl;
+                    cout<<"it's a tie!"<<endl;
+                    break;
+                default:
+                    cout<<"invalid move"<<endl;
+            }
+            break;
+        case 2:
+            cout<<"guess a number between 5 and 30: ";
+            cin>>guess;
+            if(guess<5||guess>30)
+                cout<<"number is out of range"<<endl;
+            else if(guess==17)
+                cout<<"correct guess! you win!"<<endl;
+            else
+                cout<<"wrong guess! the secret number was 17"<<endl;
+            break;
+        default:
+            cout<<"invalid game selection"<<endl;
+    }
+
+    return 0;
+}
