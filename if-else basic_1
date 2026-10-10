@@ -1,0 +1,18 @@
+// even or odd number
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout<<"enter a number= ";
+    cin>>num;
+    if(num%2==0)
+    {
+        cout<<"the number entered is even."<<endl;
+    }
+    else
+    {
+        cout<<"the number entered is odd."<<endl;
+    }
+    return 0;
+}
