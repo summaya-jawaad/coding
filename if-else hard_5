@@ -1,0 +1,40 @@
+// safari trip 
+#include<iostream>
+using namespace std;
+int main()
+{
+    int people,price=19500,total;
+    cout<<"Welcome to safari trip booking!"<<endl;
+    cout<<"enter number of people (numeral only!)=  ";
+    cin>>people;
+    if(people==1)
+    {
+        cout<<"Total price is Rs."<<price<<endl;
+    }
+    else if(people==2)
+    {
+        cout<<"Total price is Rs."<<price*2<<endl;
+    }
+    else if(people==3)
+    {
+        cout<<"Total price is Rs."<<price*3<<endl;
+    }
+    else if(people==4)
+    {
+        cout<<"Total priceis Rs."<<price*4<<endl;
+    }
+    else if(people>=5&&people<=7)
+    {
+        total=price*people;
+        total=total-(total*10/100);
+        cout<<"Family package!"<<endl;
+        cout<<"You received a 10% discount."<<endl;
+        cout<<"Total price: Rs."<<total<<endl;
+    }
+    else
+    {
+        cout<<"Invalid booking!"<<endl;
+        cout<<"Over-booking gives other people less eligibility."<<endl;
+    }
+    return 0;
+}
