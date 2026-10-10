@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    double balance = 10000, amount;
+
+    cout << "1. Check balance" << endl;
+    cout << "2. Deposit" << endl;
+    cout << "3. Withdraw" << endl;
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    switch (choice) {
+        case 1:
+            cout << "Your balance is: " << balance << endl;
+            break;
+        case 2:
+            cout << "Enter amount to deposit: ";
+            cin >> amount;
+            if (amount > 0) {
+                balance = balance + amount;
+                cout << "New balance: " << balance << endl;
+            } else {
+                cout << "Invalid amount" << endl;
+            }
+            break;
+        case 3:
+            cout << "Enter amount to withdraw: ";
+            cin >> amount;
+            if (amount > 0 && amount <= balance) {
+                balance = balance - amount;
+                cout << "New balance: " << balance << endl;
+            } else {
+                cout << "Invalid amount or insufficient balance" << endl;
+            }
+            break;
+        default:
+            cout << "Invalid choice" << endl;
+    }
+    return 0;
+}
