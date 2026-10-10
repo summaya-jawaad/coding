@@ -1,0 +1,26 @@
+// battery percentage warning 
+#include<iostream>
+using namespace std;
+int main()
+{
+    int battery;
+    cout<<"enter battery percentage: ";
+    cin>>battery;
+    if(battery<20&&battery>=0)
+    {
+        cout<<"low battery! charge your device"<<endl;
+    }
+    else if(battery<=80&&battery>=20)
+    {
+        cout<<"the battery is normal."<<endl;
+    }
+    else if(battery<=100&&battery>80)
+    {
+        cout<<"battery is high."<<endl;
+    }
+    else
+    {
+        cout<<"invalid percentage."<<endl;
+    }
+    return 0;
+}
