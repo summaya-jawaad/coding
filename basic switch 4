@@ -1,0 +1,32 @@
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int choice;
+    cout<<"what food do you want to eat?"<<endl;
+    cout<<"1. burger"<<endl;
+    cout<<"2. pizza"<<endl;
+    cout<<"3. sandwich"<<endl;
+    cout<<"4. fries"<<endl;
+    cout<<"enter your choice: ";
+    cin>>choice;
+    switch(choice)
+    {
+        case 1:
+            cout<<"you have selected burger"<<endl;
+            break;
+        case 2:
+            cout<<"you have selected pizza"<<endl;
+            break;
+        case 3:
+            cout<<"you have selected sandwich"<<endl;
+            break;
+        case 4:
+            cout<<"you have selected fries"<<endl;
+            break;
+        default:
+            cout<<"invalid choice"<<endl;
+    }
+    return 0;
+}
