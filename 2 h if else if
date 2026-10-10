@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int hour, minute;
+    cout << "Enter hour (0-23) and minute (0-59): ";
+    cin >> hour >> minute;
+
+    if (hour < 0 || hour > 23 || minute < 0 || minute > 59) {
+        cout << "Invalid time" << endl;
+    } else if (hour == 0 && minute == 0) {
+        cout << "It is exactly midnight" << endl;
+    } else if (hour == 12 && minute == 0) {
+        cout << "It is exactly noon" << endl;
+    } else if (hour < 5) {
+        cout << "Late night, time to sleep" << endl;
+    } else if (hour < 12) {
+        cout << "Good morning" << endl;
+    } else if (hour < 17) {
+        cout << "Good afternoon" << endl;
+    } else if (hour < 21) {
+        cout << "Good evening" << endl;
+    } else {
+        cout << "Good night" << endl;
+    }
+    return 0;
+}
