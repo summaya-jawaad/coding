@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double total, discount = 0, afterDiscount, delivery, finalBill;
+    int coupon, isMember;
+
+    cout << "Enter order total: ";
+    cin >> total;
+    cout << "Enter coupon (0 = none, 1 = 10% off, 2 = flat 500 off): ";
+    cin >> coupon;
+    cout << "Enter 1 if you are a member, 0 if not: ";
+    cin >> isMember;
+
+    if (total > 0) {
+        if (coupon == 1) {
+            if (total >= 2000) {
+                discount = total * 0.10;
+                cout << "Coupon 1 applied" << endl;
+            } else {
+                cout << "Coupon 1 needs a minimum order of 2000" << endl;
+            }
+        } else {
+            if (coupon == 2) {
+                if (total >= 5000) {
+                    discount = 500;
+                    cout << "Coupon 2 applied" << endl;
+                } else {
+                    cout << "Coupon 2 needs a minimum order of 5000" << endl;
+                }
+            } else {
+                if (coupon != 0) {
+                    cout << "Invalid coupon" << endl;
+                }
+            }
+        }
+
+        afterDiscount = total - discount;
+
+        if (isMember == 1) {
+            if (afterDiscount >= 1000) {
+                afterDiscount = afterDiscount - afterDiscount * 0.05;
+                cout << "Extra 5% member discount applied" << endl;
+            }
+        }
+
+        if (afterDiscount >= 3000) {
+            delivery = 0;
+            cout << "Free delivery" << endl;
+        } else {
+            delivery = 200;
+            cout << "Delivery charges: 200" << endl;
+        }
+
+        finalBill = afterDiscount + delivery;
+        cout << "Final bill: " << finalBill << endl;
+    } else {
+        cout << "Invalid order total" << endl;
+    }
+    return 0;
+}
