@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    cout << "1. Tea" << endl;
+    cout << "2. Coffee" << endl;
+    cout << "3. Cold drink" << endl;
+    cout << "4. Juice" << endl;
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    switch (choice) {
+        case 1:
+            cout << "Tea costs 100 rupees" << endl;
+            break;
+        case 2:
+            cout << "Coffee costs 250 rupees" << endl;
+            break;
+        case 3:
+            cout << "Cold drink costs 120 rupees" << endl;
+            break;
+        case 4:
+            cout << "Juice costs 200 rupees" << endl;
+            break;
+        default:
+            cout << "Invalid choice" << endl;
+    }
+    return 0;
+}
