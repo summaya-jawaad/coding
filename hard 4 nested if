@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int p1, p2;
+    cout << "1 = Rock, 2 = Paper, 3 = Scissors" << endl;
+    cout << "Player 1 choice: ";
+    cin >> p1;
+    cout << "Player 2 choice: ";
+    cin >> p2;
+
+    if (p1 >= 1 && p1 <= 3 && p2 >= 1 && p2 <= 3) {
+        if (p1 == p2) {
+            cout << "It is a draw" << endl;
+        } else {
+            if (p1 == 1) {
+                if (p2 == 3) {
+                    cout << "Player 1 wins (Rock beats Scissors)" << endl;
+                } else {
+                    cout << "Player 2 wins (Paper beats Rock)" << endl;
+                }
+            } else {
+                if (p1 == 2) {
+                    if (p2 == 1) {
+                        cout << "Player 1 wins (Paper beats Rock)" << endl;
+                    } else {
+                        cout << "Player 2 wins (Scissors beats Paper)" << endl;
+                    }
+                } else {
+                    if (p2 == 2) {
+                        cout << "Player 1 wins (Scissors beats Paper)" << endl;
+                    } else {
+                        cout << "Player 2 wins (Rock beats Scissors)" << endl;
+                    }
+                }
+            }
+        }
+    } else {
+        cout << "Invalid choice, enter 1, 2, or 3 only" << endl;
+    }
+    return 0;
+}
