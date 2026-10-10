@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int choice;
+    cout<<"select your gender:"<<endl;
+    cout<<"1. male"<<endl;
+    cout<<"2. female"<<endl;
+    cout<<"enter your choice: ";
+    cin>>choice;
+    switch(choice)
+    {
+        case 1:
+            cout<<"you selected male"<<endl;
+            break;
+        case 2:
+            cout<<"you selected female"<<endl;
+            break;
+        default:
+            cout<<"invalid! please pick again"<<endl;
+    }
+    return 0;
+}
