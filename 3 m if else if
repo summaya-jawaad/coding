@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float km, fare;
+    cout << "Enter distance in km: ";
+    cin >> km;
+
+    if (km <= 0) {
+        cout << "Invalid distance" << endl;
+    } else {
+        if (km <= 2) {
+            fare = 150;
+        } else if (km <= 10) {
+            fare = 150 + (km - 2) * 50;
+        } else if (km <= 30) {
+            fare = 550 + (km - 10) * 40;
+        } else {
+            fare = 1350 + (km - 30) * 30;
+        }
+        cout << "Taxi fare: " << fare << endl;
+    }
+    return 0;
+}
