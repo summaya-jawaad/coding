@@ -1,0 +1,29 @@
+// coffee order tea or coffee
+#include<iostream>
+using namespace std;
+int main()
+{
+    string drink;
+    int bill;
+    cout<<"Choose, Coffee or Tea: ";
+    cin>>drink;
+    if(drink=="Coffee")
+    {
+        bill=300;
+    }
+    else if(drink=="Tea")
+    {
+        bill=150;
+    }
+    else
+    {
+        cout<<"Invalid order."<<endl;
+        return 0;
+    }
+    if(bill>=500)
+    {
+        bill=bill-50;
+    }
+    cout<<"Your bill is Rupees: "<<bill<<endl;
+    return 0;
+}
