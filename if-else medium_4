@@ -1,0 +1,34 @@
+// magical powers
+#include<iostream>
+using namespace std;
+int main()
+{
+    string power;
+    cout<<"Choose fire, water, or air: ";
+    cin>>power;
+    if(power=="fire")
+    {
+        cout<<"Your power is fire bending!"<<endl;
+        cout<<"    "<<endl;
+        cout<<"You can control fire, shape it and you have heat tolerance."<<endl;
+    }
+    else if(power=="water")
+    {
+        cout<<"Your power is water control!"<<endl;
+        cout<<"    "<<endl;
+        cout<<"You can control water and most water bodies. Liquids included."<<endl;
+    }
+    else if(power=="air")
+    {
+        cout<<"Your power is flying!"<<endl;
+        cout<<"    "<<endl;
+        cout<<"You can control the wingd, guiding it with you."<<endl;
+    }
+    else
+    {
+        cout<<"Unknown power!"<<endl;
+        cout<<"    "<<endl;
+        cout<<"Whats this? an unknown power? How unique!"<<endl;
+    }
+    return 0;
+}
