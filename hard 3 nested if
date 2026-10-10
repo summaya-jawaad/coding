@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float x, y, r, distSquare;
+    cout << "Enter x and y of the point: ";
+    cin >> x >> y;
+    cout << "Enter radius of a circle centered at origin: ";
+    cin >> r;
+
+    if (r > 0) {
+        if (x == 0 && y == 0) {
+            cout << "The point is at the origin" << endl;
+        } else {
+            if (x == 0) {
+                cout << "The point is on the Y-axis" << endl;
+            } else {
+                if (y == 0) {
+                    cout << "The point is on the X-axis" << endl;
+                } else {
+                    if (x > 0) {
+                        if (y > 0) {
+                            cout << "Quadrant 1" << endl;
+                        } else {
+                            cout << "Quadrant 4" << endl;
+                        }
+                    } else {
+                        if (y > 0) {
+                            cout << "Quadrant 2" << endl;
+                        } else {
+                            cout << "Quadrant 3" << endl;
+                        }
+                    }
+                }
+            }
+        }
+
+        distSquare = x * x + y * y;
+        if (distSquare < r * r) {
+            cout << "The point is inside the circle" << endl;
+        } else {
+            if (distSquare == r * r) {
+                cout << "The point is on the circle" << endl;
+            } else {
+                cout << "The point is outside the circle" << endl;
+            }
+        }
+    } else {
+        cout << "Radius must be positive" << endl;
+    }
+    return 0;
+}
