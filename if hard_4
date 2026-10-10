@@ -1,0 +1,24 @@
+// largest among four numbers!
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b, c, d;
+    cout << "enter first number: ";
+    cin >> a;
+    cout << "enter second number: ";
+    cin >> b;
+    cout << "enter third number: ";
+    cin >> c;
+    cout << "enter fourth number: ";
+    cin >> d;
+    if (a>b &&a>c&&a>d)
+        cout << a<< " is largest";
+    if (b>a&&b>c&&b>d)
+        cout << b<< " is largest";
+    if (c>a&&c>b&&c>d)
+        cout << c<< " is largest";
+    if (d>a&&d>b&&d>c)
+        cout << d<< " is largest";
+    return 0;
+}
