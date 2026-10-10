@@ -1,0 +1,18 @@
+// temperature program 
+#include<iostream>
+using namespace std;
+int main()
+{
+    int temp;
+    cout<<"enter the temperature: ";
+    cin>>temp;
+    if(temp>=30)// temperature condition 
+    {
+        cout<<"the weather is hot"<<endl;
+    }
+    else
+    {
+        cout<<"the weather is cold"<<endl;
+    }
+    return 0;
+}
