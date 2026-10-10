@@ -1,0 +1,49 @@
+// get into navy program with requirements 
+#include<iostream>
+using namespace std;
+int main()
+{
+    int choice,age;
+    float height;
+    char disability;
+    cout<<"!! NAVY ELIGIBILITY CHECK !!"<<endl;
+    cout<<"1. Boy"<<endl;
+    cout<<"2. Girl"<<endl;
+    cout<<"Enter your gender choice: ";
+    cin>>choice;
+    cout<<"Do you have a disability? (Y/N): ";
+    cin>>disability;
+    if(disability=='Y')
+    {
+        cout<<"You are not eligible due to disability."<<endl;
+    }
+    else if(disability=='N')
+    {
+        cout<<"Enter your age: ";
+        cin>>age;
+        cout<<"Enter your height in cm: ";
+        cin>>height;
+        switch(choice)
+        {
+            case 1:
+                if(age>=19&&height>=162.5)
+                    cout<<"You are eligible for the Navy."<<endl;
+                else
+                    cout<<"You are not eligible for the Navy."<<endl;
+                break;
+            case 2:
+                if(age>=21&&height>=152.4)
+                    cout<<"You are eligible for the Navy."<<endl;
+                else
+                    cout<<"You are not eligible for the Navy."<<endl;
+                break;
+
+            default:
+                cout<<"Invalid gender choice!"<<endl;
+        }
+    }
+    else
+    {
+        cout<<"invalid disability input!"<<endl;
+    }
+    return 0;
