@@ -1,0 +1,46 @@
+// GPA based program
+#include<iostream>
+using namespace std;
+int main()
+{
+    int marks;
+    cout<<"Enter your marks: ";
+    cin>>marks;
+    if(marks>=80&&marks<=100)
+    {
+        cout<<"your GPA is 4.0"<<endl;
+    }
+    else if(marks>=75)
+    {
+        cout<<"your GPA is 3.7"<<endl;
+    }
+    else if(marks>=70)
+    {
+        cout<<"your GPA is 3.3"<<endl;
+    }
+    else if(marks>=65)
+    {
+        cout<<"your GPA is 3.0"<<endl;
+    }
+    else if(marks>=60)
+    {
+        cout<<"your GPA is 2.7"<<endl;
+    }
+    else if(marks>=55)
+    {
+        cout<<"your GPA is 2.3"<<endl;
+    }
+    else if(marks>=50)
+    {
+        cout<<"your GPA is 2.0"<<endl;
+    }
+    else if(marks>=0&&marks<50)
+    {
+        cout<<"your GPA is 0.0"<<endl;
+    }
+    else
+    {
+        cout<<"invalid marks!"<<endl;
+    }
+    return 0;
+}
