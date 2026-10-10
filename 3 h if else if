@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int size, cheese;
+    double price, total, discount;
+
+    cout << "Enter size (1 = Small, 2 = Medium, 3 = Large): ";
+    cin >> size;
+    cout << "Extra cheese? (1 = Yes, 0 = No): ";
+    cin >> cheese;
+
+    if (size == 1) {
+        price = 800;
+    } else if (size == 2) {
+        price = 1200;
+    } else if (size == 3) {
+        price = 1600;
+    } else {
+        cout << "Invalid size" << endl;
+        return 0;
+    }
+
+    if (cheese == 1) {
+        price = price + 200;
+    } else if (cheese != 0) {
+        cout << "Invalid cheese choice" << endl;
+        return 0;
+    }
+
+    if (price >= 1800) {
+        discount = price * 0.15;
+    } else if (price >= 1400) {
+        discount = price * 0.10;
+    } else if (price >= 1000) {
+        discount = price * 0.05;
+    } else {
+        discount = 0;
+    }
+
+    total = price - discount;
+    cout << "Price: " << price << endl;
+    cout << "Discount: " << discount << endl;
+    cout << "Total to pay: " << total << endl;
+    return 0;
+}
