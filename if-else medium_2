@@ -1,0 +1,27 @@
+// for movie ticket entry 
+#include<iostream>
+using namespace std;
+int main()
+{
+    int age;
+    cout<<"enter your age: ";
+    cin>>age;
+    if(age<12&&age>=0)
+    {
+        cout<<"ticket price: Rs. 200"<<endl;
+    }
+    else if(age<50&&age>=12)
+    {
+        cout<<"ticket price: Rs. 500"<<endl;
+    }
+    else if(age>=50)
+    {
+    	cout<< "Senior discount!"
+        cout<<"ticket price: Rs. 350"<<endl;
+    }
+    else
+    {
+        cout<<"invalid age."<<endl;
+    }
+    return 0;
+}
