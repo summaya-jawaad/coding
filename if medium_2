@@ -1,0 +1,14 @@
+// program to check whether a student gets an A grade
+#include<iostream>
+using namespace std;
+int main()
+{
+    int marks;
+    cout<<"Enter your marks out of 100: ";
+    cin>>marks;
+    if(marks>=80&&marks<=100)
+    {
+        cout<<"you have achieved an A grade!!"<<endl;
+    }
+    return 0;
+}
