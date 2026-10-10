@@ -1,0 +1,16 @@
+//program that check if youre eligibile for an electricity bill discount
+#include<iostream>
+using namespace std;
+int main()
+{
+    int units,bill;
+    cout<<"enter electricity units consumed: ";
+    cin>>units;
+    cout<<"enter bill amount in Rupees: ";
+    cin>>bill;
+    if(units<200&&bill>=3000)
+    {
+        cout<<"you qualify for the electricity bill discount!"<<endl;
+    }
+    return 0;
+}
