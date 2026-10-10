@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int age, score, hasLoan;
+    double income, amount, maxLoan;
+
+    cout << "Enter age: ";
+    cin >> age;
+    cout << "Enter monthly income: ";
+    cin >> income;
+    cout << "Enter credit score (300 to 850): ";
+    cin >> score;
+    cout << "Enter 1 if you already have a loan, 0 if not: ";
+    cin >> hasLoan;
+    cout << "Enter loan amount you want: ";
+    cin >> amount;
+
+    if (age >= 21 && age <= 60) {
+        if (income >= 30000) {
+            if (score >= 300 && score <= 850) {
+                if (score >= 700) {
+                    maxLoan = income * 20;
+                } else {
+                    if (score >= 600) {
+                        maxLoan = income * 10;
+                    } else {
+                        cout << "Rejected: credit score is too low" << endl;
+                        return 0;
+                    }
+                }
+
+                if (hasLoan == 1) {
+                    maxLoan = maxLoan / 2;
+                    cout << "Your limit is halved because you have an existing loan" << endl;
+                }
+
+                if (amount <= maxLoan) {
+                    cout << "Loan approved" << endl;
+                } else {
+                    cout << "Rejected: maximum loan you can get is " << maxLoan << endl;
+                }
+            } else {
+                cout << "Invalid credit score" << endl;
+            }
+        } else {
+            cout << "Rejected: income is below 30000" << endl;
+        }
+    } else {
+        cout << "Rejected: age must be between 21 and 60" << endl;
+    }
+    return 0;
+}
