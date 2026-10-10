@@ -1,0 +1,14 @@
+// program to check whether a number is a three digit odd number
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout<<"Enter a number: ";
+    cin>>num;
+    if(num>=100&&num<=999&&num%2!=0)
+    {
+        cout<<"this number is a three-digit odd number."<<endl;
+    }
+    return 0;
+}
