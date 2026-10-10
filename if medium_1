@@ -1,0 +1,16 @@
+// program to check whether student can participate in college trip
+#include<iostream>
+using namespace std;
+int main()
+{
+    int age,attendance;
+    cout<<"enter your age=";
+    cin>>age;
+    cout<<"enter your attendance percentage: ";
+    cin>>attendance;
+    if(age>=18&&attendance>=75)
+    {
+        cout<<"yes! you can participate in the university trip."<<endl;
+    }
+    return 0;
+}
